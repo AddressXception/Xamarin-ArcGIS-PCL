@@ -1,0 +1,11 @@
+﻿Unfortunately due to licensing the ArcGIS Runtime is not redistributable.  You'll have to add it.
+Add a folder:
+
+Jars
+
+To the root directory of this project 
+and copy the following jar files from the SDK:
+
+ArcGIS_Android.jar (may be named something different)
+jackson-core-lgpl-1.9.5,jar
+jackson-mapper-lgpl-1.9.5.jar

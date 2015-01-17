@@ -1,7 +1,10 @@
-using Cirrious.CrossCore.IoC;
 
 namespace Xamarin_ArcGIS_PCL.Samples.Mvx.Core
 {
+    using Cirrious.CrossCore.IoC;
+    using Cirrious.CrossCore;
+    using Xamarin_ArcGIS_PCL.Core;
+
     public class App : Cirrious.MvvmCross.ViewModels.MvxApplication
     {
         public override void Initialize()
@@ -10,8 +13,10 @@ namespace Xamarin_ArcGIS_PCL.Samples.Mvx.Core
                 .EndingWith("Service")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
-				
-            RegisterAppStart<ViewModels.FirstViewModel>();
+
+            Mvx.LazyConstructAndRegisterSingleton<IMapViewFactory, MapViewFactory>();
+
+            RegisterAppStart<ViewModels.MapViewModel>();
         }
     }
 }

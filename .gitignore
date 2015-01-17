@@ -41,3 +41,22 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+Xamarin-ArcGIS-PCL.Core/bin/
+Xamarin-ArcGIS-PCL.Core/obj/
+Xamarin-ArcGIS-PCL.Droid/bin/
+Xamarin-ArcGIS-PCL.Droid/obj/
+Xamarin-ArcGIS-PCL.WinRT/bin/
+Xamarin-ArcGIS-PCL.WinRT/obj/
+Samples/Mvx/Xamarin-ArcGIS-PCL.Samples.Mvx.Core/bin/
+Samples/Mvx/Xamarin-ArcGIS-PCL.Samples.Mvx.Core/obj/
+Samples/Mvx/Xamarin-ArcGIS-PCL.Samples.Mvx.Droid/bin/
+Samples/Mvx/Xamarin-ArcGIS-PCL.Samples.Mvx.Droid/obj/
+Samples/Mvx/Xamarin-ArcGIS-PCL.Samples.Mvx.Droid/Assets/armeabi/
+Samples/Mvx/Xamarin-ArcGIS-PCL.Samples.Mvx.Droid/Assets/armeabi-v7a/
+Samples/Mvx/Xamarin-ArcGIS-PCL.Samples.Mvx.Droid/Assets/x86/
+Binding/ArcGISBinding.Android/bin/
+Binding/ArcGISBinding.Android/obj/
+Binding/ArcGISBinding.Android/jars/ArcGIS_Android.jar
+Binding/ArcGISBinding.Android/jars/jackson-core-lgpl-1.9.5.jar
+Binding/ArcGISBinding.Android/jars/jackson-mapper-lgpl-1.9.5.jar
+packages/

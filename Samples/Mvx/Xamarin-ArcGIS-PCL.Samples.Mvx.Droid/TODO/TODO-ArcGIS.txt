@@ -1,0 +1,14 @@
+﻿Because ArcGIS is not redistributable, you need to add the various native files for your platform architecture
+
+copythe appropriate:
+
+librender_script_analysis.so
+librs.main.so
+libruntimecore_java.so
+
+to:
+
+Assets/
+	armeabi/
+	armeabi-v7a/
+	x86/

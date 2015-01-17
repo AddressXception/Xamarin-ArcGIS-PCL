@@ -15,9 +15,11 @@
     <AndroidApplication>true</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
-    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <AndroidUseLatestPlatformSdk>
+    </AndroidUseLatestPlatformSdk>
     <DevInstrumentationEnabled>True</DevInstrumentationEnabled>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <TargetFrameworkVersion>v4.2</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -88,25 +90,28 @@
   <ItemGroup>
     <Compile Include="DebugTrace.cs" />
     <Compile Include="LinkerPleaseInclude.cs" />
-    <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="SplashScreen.cs" />
-    <Compile Include="Views\FirstView.cs" />
+    <Compile Include="Views\BaseView.cs" />
+    <Compile Include="Views\MapView.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidNativeLibrary Include="Assets\armeabi\librender_script_analysis.so" />
+    <AndroidNativeLibrary Include="Assets\armeabi\librs.main.so" />
+    <AndroidNativeLibrary Include="Assets\armeabi\libruntimecore_java.so" />
+    <AndroidNativeLibrary Include="Assets\armeabi-v7a\librender_script_analysis.so" />
+    <AndroidNativeLibrary Include="Assets\armeabi-v7a\librs.main.so" />
+    <AndroidNativeLibrary Include="Assets\armeabi-v7a\libruntimecore_java.so" />
+    <AndroidNativeLibrary Include="Assets\x86\librender_script_analysis.so" />
+    <AndroidNativeLibrary Include="Assets\x86\librs.main.so" />
+    <AndroidNativeLibrary Include="Assets\x86\libruntimecore_java.so" />
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\layout\SplashScreen.axml" />
-    <AndroidResource Include="Resources\layout\FirstView.axml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout\Main.axml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\layout\MapView.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Icon.png" />
@@ -119,6 +124,10 @@
     <Content Include="ToDo-MvvmCross\_ Droid UI.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Binding\ArcGISBinding.Android\ArcGISBinding.Android.csproj">
+      <Project>{216bf990-90e7-4d65-b588-093f95383dce}</Project>
+      <Name>ArcGISBinding.Android</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Xamarin-ArcGIS-PCL.Core\Xamarin-ArcGIS-PCL.Core.csproj">
       <Project>{36b07fe9-5eea-4e3f-849d-a74e4ae09502}</Project>
       <Name>Xamarin-ArcGIS-PCL.Core</Name>
@@ -126,6 +135,7 @@
     <ProjectReference Include="..\..\..\Xamarin-ArcGIS-PCL.Droid\Xamarin-ArcGIS-PCL.Droid.csproj">
       <Project>{e3484909-ac76-41d6-927b-31dc65294d63}</Project>
       <Name>Xamarin-ArcGIS-PCL.Droid</Name>
+      <Aliases>droid</Aliases>
     </ProjectReference>
     <ProjectReference Include="..\Xamarin-ArcGIS-PCL.Samples.Mvx.Core\Xamarin-ArcGIS-PCL.Samples.Mvx.Core.csproj">
       <Project>{9efb590e-3064-427e-a5d9-d8e8c841d55c}</Project>

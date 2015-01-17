@@ -14,8 +14,10 @@
     <FileAlignment>512</FileAlignment>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
-    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <AndroidUseLatestPlatformSdk>
+    </AndroidUseLatestPlatformSdk>
     <DevInstrumentationEnabled>True</DevInstrumentationEnabled>
+    <TargetFrameworkVersion>v4.2</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,22 +45,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="..\Xamarin-ArcGIS-PCL.Core\ESRI\ArcGISRuntime\Layers\Layer.cs">
+      <Link>Layers\Layer.cs</Link>
+    </Compile>
+    <Compile Include="..\Xamarin-ArcGIS-PCL.Core\ESRI\ArcGISRuntime\Layers\OpenStreetMapLayer.cs">
+      <Link>Layers\OpenStreetMapLayer.cs</Link>
+    </Compile>
+    <Compile Include="..\Xamarin-ArcGIS-PCL.Core\ESRI\ArcGISRuntime\Layers\TiledLayer.cs">
+      <Link>Layers\TiledLayer.cs</Link>
+    </Compile>
+    <Compile Include="..\Xamarin-ArcGIS-PCL.Core\ESRI\ArcGISRuntime\Layers\TiledMapServiceLayer.cs">
+      <Link>Layers\TiledMapServiceLayer.cs</Link>
+    </Compile>
+    <Compile Include="..\Xamarin-ArcGIS-PCL.Core\ESRI\ArcGISRuntime\Layers\WebTiledLayer.cs">
+      <Link>Layers\WebTiledLayer.cs</Link>
+    </Compile>
+    <Compile Include="AndroidNativeMapView.cs" />
+    <Compile Include="Extensions\LayerExtensions.cs" />
+    <Compile Include="Geometry\Envelope.cs" />
+    <Compile Include="Geometry\Point.cs" />
+    <Compile Include="Geometry\SpatialReference.cs" />
+    <Compile Include="MapViewFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AboutResources.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Values\Strings.xml" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\Binding\ArcGISBinding.Android\ArcGISBinding.Android.csproj">
+      <Project>{216bf990-90e7-4d65-b588-093f95383dce}</Project>
+      <Name>ArcGISBinding.Android</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Xamarin-ArcGIS-PCL.Core\Xamarin-ArcGIS-PCL.Core.csproj">
       <Project>{36b07fe9-5eea-4e3f-849d-a74e4ae09502}</Project>
       <Name>Xamarin-ArcGIS-PCL.Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

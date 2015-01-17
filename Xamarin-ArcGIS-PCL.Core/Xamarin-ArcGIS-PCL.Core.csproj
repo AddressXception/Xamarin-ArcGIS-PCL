@@ -34,11 +34,37 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <!-- A reference to the entire .NET Framework is automatically included -->
+    <Compile Include="Annotations.cs" />
+    <Compile Include="ESRI\ArcGISRuntime\Geometry\Coordinate.cs" />
+    <Compile Include="ESRI\ArcGISRuntime\Geometry\Envelope.cs" />
+    <Compile Include="ESRI\ArcGISRuntime\Geometry\Geometry.cs" />
+    <Compile Include="ESRI\ArcGISRuntime\Geometry\GeometryType.cs" />
+    <Compile Include="ESRI\ArcGISRuntime\Geometry\MapPoint.cs" />
+    <Compile Include="ESRI\ArcGISRuntime\Geometry\MultiPoint.cs" />
+    <Compile Include="ESRI\ArcGISRuntime\Geometry\Polygon.cs" />
+    <Compile Include="ESRI\ArcGISRuntime\Geometry\Polyline.cs" />
+    <Compile Include="ESRI\ArcGISRuntime\Geometry\SpatialReference.cs" />
+    <Compile Include="ESRI\ArcGISRuntime\Geometry\Unit.cs" />
+    <Compile Include="ESRI\ArcGISRuntime\Geometry\UnitType.cs" />
+    <Compile Include="ESRI\ArcGISRuntime\Layers\Layer.cs" />
+    <Compile Include="ESRI\ArcGISRuntime\Layers\LayerInitializationInfo.cs" />
+    <Compile Include="ESRI\ArcGISRuntime\Layers\LayerStatus.cs" />
+    <Compile Include="ESRI\ArcGISRuntime\Layers\OpenStreetMapLayer.cs" />
+    <Compile Include="ESRI\ArcGISRuntime\Layers\TiledLayer.cs" />
+    <Compile Include="ESRI\ArcGISRuntime\Layers\TiledLayerInitializationInfo.cs" />
+    <Compile Include="ESRI\ArcGISRuntime\Layers\TiledMapServiceLayer.cs" />
+    <Compile Include="ESRI\ArcGISRuntime\Layers\WebTiledLayer.cs" />
+    <Compile Include="IMapViewFactory.cs" />
+    <Compile Include="MapViewFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Reference Include="Splat">
+      <HintPath>..\packages\Splat.1.6.0\lib\Portable-net45+win+wpa81+wp80\Splat.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
